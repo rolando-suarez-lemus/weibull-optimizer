@@ -1,0 +1,209 @@
+/* App Container */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Header */
+.app-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeInDown 0.6s ease-out;
+}
+
+.app-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.app-header .subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+/* Main Layout */
+.app-main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2rem;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Control Panel */
+.control-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
+  height: fit-content;
+  top: 0;
+  position: sticky;
+}
+
+.control-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  border-radius: 16px 16px 0 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.control-panel h2 {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.5rem;
+}
+
+.slider-group {
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.slider-group label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Visualization Panel */
+.visualization-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
+}
+
+.visualization-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  border-radius: 16px 16px 0 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.visualization-panel h2 {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.5rem;
+}
+
+/* Formula Panel */
+.formula-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
+  height: fit-content;
+}
+
+.formula-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  border-radius: 16px 16px 0 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.formula-panel h2 {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.5rem;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .app-main {
+    grid-template-columns: 1fr;
+  }
+
+  .control-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+  }
+
+  .control-panel,
+  .visualization-panel,
+  .formula-panel {
+    padding: 1.5rem;
+  }
+
+  .app-header h1 {
+    font-size: 2rem;
+  }
+}
