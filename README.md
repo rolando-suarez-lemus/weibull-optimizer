@@ -231,10 +231,11 @@ Guardar análisis Weibull por equipo antes/después de intervención (cambio de 
 
 ## Referencias
 
-- **Smith, C. L. & Wood, T. M.** (2013): Reliability Engineering and Risk Management
-- **Weibull, W.** (1951): A Statistical Distribution of Wide Applicability
-- **ISO 55001**: Asset Management
-- **RCM Standard**: MIL-STD-3034; ISO/IEC 60812
+- **Smith, D. J.** (2017): Reliability, Maintainability and Risk: Practical Methods for Engineers (9ª ed.), Butterworth-Heinemann
+- **Weibull, W.** (1951): A Statistical Distribution of Wide Applicability, Journal of Applied Mechanics
+- **ISO 55001**: Asset Management — Management systems — Requirements
+- **ISO/IEC 60812**: Failure modes and effects analysis (FMEA)
+- **MIL-STD-3034**: General requirements for reliability engineering
 
 ---
 
